@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>School Form</title>
+        <style>
+            body {
+                /* background: #b4b4b4; */
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M480.2056620475064 7.817776114939239L394.72495284555333 121.25450860983119 508.1616853404453 206.73521781178425 593.6423945423984 93.2984853168923z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M516.54%2c132.899C534.956%2c132.172%2c550.04%2c120.045%2c559.377%2c104.155C568.861%2c88.014%2c573.468%2c68.174%2c564.098%2c51.966C554.735%2c35.771%2c535.209%2c28.871%2c516.54%2c30.058C499.81%2c31.121%2c487.373%2c43.242%2c478.416%2c57.413C468.574%2c72.985%2c459.106%2c91.344%2c467.411%2c107.788C476.297%2c125.383%2c496.843%2c133.677%2c516.54%2c132.899' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M604.320175812953 598.0405642982029L567.7327162601487 478.36837641623003 448.06052837817583 514.9558359690345 484.6479879309802 634.6280238510072z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M840.8434245665652 333.1846563794658L898.3064425522705 271.56311390801 777.142619852234 216.17935816518013z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M391.1504800698632 399.7386631022058L490.4966146673781 408.5257353106647 455.03601836546295 328.8799319919915z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1350.004639487584 100.06776710268008L1266.4532231023752 69.65753850768264 1262.6135884024834 210.18977738299446z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+            }
+
+            #registration-form {
+                /* font-family:'Open Sans Condensed', sans-serif; */
+                font-family: Cascadia Code, sans-serif;
+                width: 400px;
+                min-width: 250px;
+                margin: 20px auto;
+                position: relative;
+            }
+
+            #registration-form .fieldset {
+                background-color: #d5d5d5;
+
+                border-radius: 3px;
+            }
+
+            #registration-form legend {
+                text-align: center;
+                background: Black;
+                width: 100%;
+                padding: 30px 0;
+                border-radius: 3px 3px 0 0;
+                color: white;
+                font-size: 2em;
+            }
+
+            .fieldset form {
+                border: 1px solid #2f2f2f;
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                padding: 30px 20px;
+                box-sizing: border-box;
+                border-radius: 0 0 3px 3px;
+            }
+            .placeholder #registration-form label {
+                display: none;
+            }
+            .no-placeholder #registration-form label {
+                margin-left: 5px;
+                position: relative;
+                display: block;
+                color: grey;
+                text-shadow: 0 1px white;
+                font-weight: bold;
+            }
+            /* all */
+            ::-webkit-input-placeholder {
+                /* text-shadow: 1px 1px 1px white; */
+                /* color: white; */
+                color: black;
+                font-size: 1em;
+                font-weight: bold;
+            }
+            ::-moz-placeholder {
+                text-shadow: 0 1px 1px white;
+                font-weight: bold;
+            } /* firefox 19+ */
+            :-ms-input-placeholder {
+                text-shadow: 0 1px 1px white;
+                font-weight: bold;
+            } /* ie */
+            #registration-form input {
+                padding: 15px 20px;
+                border-radius: 1px;
+                margin: 5px auto;
+                background-color: #f7f7f7;
+                /* background-color: white; */
+                border: 1px solid silver;
+
+                -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+                box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2),
+                    0 1px rgba(255, 255, 255, 0.8);
+                width: 100%;
+
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-transition: background-color 0.5s ease;
+                -moz-transition: background-color 0.5s ease;
+                -o-transition: background-color 0.5s ease;
+                -ms-transition: background-color 0.5s ease;
+                transition: background-color 0.5s ease;
+            }
+            .no-placeholder #registration-form input {
+                padding: 10px 20px;
+            }
+
+            #registration-form input:active,
+            .placeholder #registration-form input:focus {
+                outline: none;
+                border-color: silver;
+                background-color: white;
+            }
+
+            #registration-form input {
+                font-family: "Open Sans Condensed", sans-serif;
+                text-transform: uppercase;
+                outline: none;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 100%;
+                /* background-color: #5c8ca7; */
+                background-color: white;
+                padding: 8px;
+                /* color: white; */
+                color: black;
+                border: 1px solid black;
+                border-radius: 3px;
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-top: 5px;
+                cursor: pointer;
+                position: relative;
+                top: 0;
+                border-radius: 22px;
+            }
+
+            #registration-form input:hover {
+                /* background-color: #2980b9; */
+                background-color: #ddd;
+            }
+
+            #registration-form input:active {
+                /* background: #5c8ca7; */
+                background: #ddd;
+            }
+
+            .parsley-error-list {
+                background-color: #c34343;
+                padding: 5px 11px;
+                margin: 0;
+                list-style: none;
+                border-radius: 0 0 3px 3px;
+                margin-top: -5px;
+                margin-bottom: 5px;
+                color: white;
+                border: 1px solid #870d0d;
+                border-top: none;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                position: relative;
+                top: -1px;
+                text-shadow: 0px 1px 1px #460909;
+                font-weight: 700;
+                font-size: 12px;
+            }
+            .parsley-error {
+                border-color: #870d0d !important;
+                border-bottom: none;
+            }
+            #registration-form select {
+                width: 100%;
+                padding: 5px;
+            }
+            ::-moz-focus-inner {
+                border: 0;
+            }
+            .heading {
+                font-size: 1.2em;
+                padding: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="registration-form">
+            <div class="fieldset">
+                <legend>Grade Calculater</legend>
+                <form action="/" method="post" data-validate="parsley">
+                    <div class="row">
+                        <label for="firstname">Full Name</label>
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            name="firstname"
+                            id="firstname"
+                            data-required="true"
+                            data-error-message="Your First Name is required"
+                        />
+                    </div>
+                    <div class="row">
+                        <label for="email">ID</label>
+                        <input
+                            type="number"
+                            placeholder="ID"
+                            name="email"
+                            data-required="true"
+                            data-type="email"
+                            data-error-message="Your E-mail is required"
+                        />
+                    </div>
+                    <div class="heading">Please Enter Marks</div>
+                    <div class="row">
+                        <label for="cemail">Marks 1</label>
+                        <input
+                            type="text"
+                            placeholder="Marks 1"
+                            name="cemail"
+                            data-required="true"
+                            data-error-message="Your E-mail must correspond"
+                        />
+                    </div>
+                    <div class="row">
+                        <label for="cemail">Marks 2</label>
+                        <input
+                            type="number"
+                            placeholder="Marks 2"
+                            name="cemail"
+                            data-required="true"
+                            data-error-message="Your E-mail must correspond"
+                        />
+                    </div>
+                    <div class="row">
+                        <label for="cemail">Marks 3</label>
+                        <input
+                            type="number"
+                            placeholder="Marks 3"
+                            name="cemail"
+                            data-required="true"
+                            data-error-message="Your E-mail must correspond"
+                        />
+                    </div>
+                    <div class="row">
+                        <label for="cemail">Marks 4</label>
+                        <input
+                            type="number"
+                            placeholder="Marks 4"
+                            name="cemail"
+                            data-required="true"
+                            data-error-message="Your E-mail must correspond"
+                        />
+                    </div>
+                    <div class="row">
+                        <label for="cemail">Marks 5</label>
+                        <input
+                            type="number"
+                            placeholder="Marks 5"
+                            name="cemail"
+                            data-required="true"
+                            data-error-message="Your E-mail must correspond"
+                        />
+                    </div>
+                    <input type="submit" value="Enter Marks" />
+                </form>
+            </div>
+            <script></script>
+        </div>
+    </body>
+</html>

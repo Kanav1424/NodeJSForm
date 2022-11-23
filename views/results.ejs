@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Results</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            table {
+                border: none;
+            }
+            th,
+            td {
+                border-bottom: 1px solid #ddd;
+                padding: 15px;
+                text-align: left;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="3">
+            <tr>
+                <th>Name&nbsp&nbsp</th>
+                <th>ID&nbsp&nbsp</th>
+                <th>Average&nbsp&nbsp</th>
+                <th>Grade&nbsp&nbsp</th>
+                <th>Marks 1&nbsp&nbsp</th>
+                <th>Marks 2&nbsp&nbsp</th>
+                <th>Marks 3&nbsp&nbsp</th>
+                <th>Marks 4&nbsp&nbsp</th>
+                <th>Marks 5&nbsp&nbsp</th>
+            </tr>
+            <% data.forEach(data => { %>
+            <tr>
+                <td><%-data.name%>&nbsp&nbsp</td>
+                <td><%-data.id%>&nbsp&nbsp</td>
+                <td><%-data.average%>&nbsp&nbsp</td>
+                <td><%-data.grade%>&nbsp&nbsp</td>
+                <% data.numbers.forEach((num,idx) => { %>
+                <td><%- num %>&nbsp&nbsp</td>
+                <% }) %>
+            </tr>
+            <% }) %>
+        </table>
+    </body>
+</html>
